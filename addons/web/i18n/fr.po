@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* web
-# 
+#
 # Translators:
 # f477e7ae9c75a2428d6113663a8354fe_bcd021c <0ff4ce060a36f446722508a48e99c22a_347081>, 2022
 # e2f <projects@e2f.com>, 2022
@@ -11,7 +11,7 @@
 # Martin Trigaux, 2022
 # Cécile Collart <cco@odoo.com>, 2022
 # Jolien De Paepe, 2022
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0beta\n"
@@ -6501,6 +6501,22 @@ msgstr "n’est pas défini"
 #, python-format
 msgid "is set"
 msgstr "est défini"
+
+#. module: web
+#. openerp-web
+#: code:addons/web/static/src/js/control_panel/search_utils.js:0
+#: code:addons/web/static/src/js/widgets/domain_selector.js:0
+#, python-format
+msgid "matches"
+msgstr "correspond"
+
+#. module: web
+#. openerp-web
+#: code:addons/web/static/src/js/control_panel/search_utils.js:0
+#: code:addons/web/static/src/js/widgets/domain_selector.js:0
+#, python-format
+msgid "doesn't match"
+msgstr "ne correspond pas"
 
 #. module: web
 #. openerp-web
