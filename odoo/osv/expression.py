@@ -970,7 +970,8 @@ class expression(object):
                     expr = ''
                     params = []
 
-                    need_wildcard = operator in ('like', 'ilike', 'not like', 'not ilike')
+                    need_wildcard = (operator in ('like', 'ilike', 'not like', 'not ilike')
+                                     and '%' not in right and '_' not in right)
                     if not need_wildcard:
                         right = field.convert_to_column(right, model, validate=False).adapted['en_US']
 
@@ -1135,7 +1136,8 @@ class expression(object):
             if field is None:
                 raise ValueError("Invalid field %r in domain term %r" % (left, leaf))
 
-            need_wildcard = operator in ('like', 'ilike', 'not like', 'not ilike')
+            need_wildcard = (operator in ('like', 'ilike', 'not like', 'not ilike')
+                             and '%' not in right and '_' not in right)
             sql_operator = {
                 '=like': 'like', '=ilike': 'ilike','regexp': '~*','not regexp': '!~*'
             }.get(operator, operator)
